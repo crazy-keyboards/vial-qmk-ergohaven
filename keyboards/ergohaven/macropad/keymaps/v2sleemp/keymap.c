@@ -41,20 +41,23 @@ const PhysicalCombo layer_combos[] = {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+  // NUMPAD
   [0] = LAYOUT(
-                        KC_MUTE,
-      KC_7, KC_8,       KC_9,
-      KC_4, KC_5,       KC_6,
-      KC_1, KC_2,       KC_3,
-      KC_0, KC_ENT, KC_ENT
+                     KC_MUTE,
+      KC_7, KC_8,    KC_9,
+      KC_4, KC_5,    KC_6,
+      KC_1, KC_2,    KC_3,
+      KC_0, KC_PDOT, KC_ENT
   ),
+  // ARROWS
   [1] = LAYOUT(
                         _______,
-      KC_HOME, KC_INS,  KC_END,
+      KC_INS,  KC_HOME, KC_PGUP,
+      KC_DEL,  KC_END,  KC_PGDN,
       PREVWRD, KC_UP,   NEXTWRD,
-      KC_LEFT, KC_DOWN, KC_RIGHT,
-      KC_DEL,  _______, _______
+      KC_LEFT, KC_DOWN, KC_RIGHT
   ),
+  // MOUSE
   [2] = LAYOUT(
                         KC_BTN3,
       C(KC_X), C(KC_C), C(KC_V),
@@ -62,6 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_MS_L, KC_MS_D, KC_MS_R,
       KC_PSCR, _______, _______
   ),
+  // PC
   [3] = LAYOUT(
                         KC_MUTE,
       KC_BRID, KC_CPNL, KC_BRIU,
